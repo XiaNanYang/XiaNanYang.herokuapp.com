@@ -1,0 +1,41 @@
+%nav#navbar.navbar.navbar-inverse.bg-primary.fixed-top.navbar-toggleable-sm
+  %button.navbar-toggler.navbar-toggler-right{'aria-controls': 'navbarNavCollapse', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation', 'data-target': '#navbarNavCollapse', 'data-toggle': 'collapse', type: 'button'}
+    %span.navbar-toggler-icon
+
+  = link_to :root, class: 'navbar-brand' do
+    %img{alt: :🏝⛵️🍀🌿}
+
+  #navbarNavCollapse.collapse.navbar-collapse
+    .navbar-nav.mr-auto
+      = link_to :root, class: active_class(root_path, base: 'nav-item nav-link') do
+        %i.material-icons.md-18<> home
+        = t('menu.home')
+        %span.sr-only> (current)
+      = link_to :places, class: active_class(places_path, base: 'nav-item nav-link') do
+        %i.material-icons.md-18<> map
+        = t('menu.places')
+      = link_to :activities, class: active_class(activities_path, base: 'nav-item nav-link') do
+        %i.material-icons.md-18<> person_pin_circle
+        = t('menu.activities')
+      = content_for?(:controller_menu) ? yield(:controller_menu) : ''
+
+    .navbar-nav
+      - if ! user_signed_in?
+        = link_to t('menu.sign_up'), :new_user_registration, class: active_class(new_user_registration_path, base: 'nav-item nav-link')
+        = link_to t('menu.login'), :new_user_session, class: active_class(new_user_session_path, base: 'nav-item nav-link')
+      - else
+        .nav-item.dropdown
+          %a#navbarProfileMenuLink.nav-link.dropdown-toggle{"aria-expanded": "false", "aria-haspopup": "true", "data-toggle": "dropdown"}
+            %i.material-icons.md-18<> person
+            = t('menu.profile')
+            %span.caret>
+          .dropdown-menu.dropdown-menu-right{"aria-labelledby": "navbarProfileMenuLink"}
+            %h6.dropdown-header<
+              = current_user.email
+              %br<
+              = precede "@" do
+                %b>= current_user.id
+            .dropdown-divider
+            = link_to t('menu.edit_profile'), :edit_user_registration, class: active_class(edit_user_registration_path, base: 'dropdown-item')
+            .dropdown-divider
+            = link_to t('menu.logout'), :destroy_user_session, method: :delete, class: active_class(destroy_user_session_path, base: 'dropdown-item')

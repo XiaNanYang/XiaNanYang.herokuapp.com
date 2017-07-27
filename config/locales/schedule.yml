@@ -1,0 +1,15 @@
+en:
+  schedule:
+    arrival_at: Arrival Date
+    departure_at: Departure Date
+    description: Description
+    add_schedule: Add schedule
+    remove: Remove
+
+zh-CN:
+  schedule:
+    arrival_at: 到达日期
+    departure_at: 离开日期
+    description: 备注
+    add_schedule: 添加地点
+    remove: 移除

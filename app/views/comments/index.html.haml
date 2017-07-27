@@ -1,0 +1,9 @@
+= render '%s/items' % @commentable.model_name.route_key, items: [@commentable]
+%h3= t('comment.list_comments')
+
+= paginate @comments
+= render 'items', commentable: @commentable, items: @comments
+= paginate @comments
+%br
+
+= link_to t('comment.new_comment'), new_polymorphic_url([@commentable, Comment]), id: (user_signed_in? ? :new_comment : nil)

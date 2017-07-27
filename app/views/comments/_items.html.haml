@@ -1,0 +1,7 @@
+/ commentable, items
+#comments.list-group{'data-url': polymorphic_url([commentable, :comments], only_path: true)}
+  - items.each do |comment|
+    .list-group-item.flex-column.align-items-start
+      .d-flex.w-100.justify-content-between<>
+      %p.comment-content.mt-1<>= comment.content.html_safe
+      %small<>

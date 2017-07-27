@@ -1,0 +1,39 @@
+en:
+  activity:
+    create: New Activity
+    import: Import Activity
+    posted: Post at
+    from: From
+    back: Back
+    from_/_back: From/Back
+    date_range: dates
+
+    post_new_activity: Publish new activity
+
+    save: Save
+    description: Description
+    add_description: Write more about your journey...
+
+    list_activities: Activities
+    new_activity: New Activity
+    edit_activity: Update Activity
+
+zh-CN:
+  activity:
+    create: '发布新行程'
+    import: 导入行程
+    posted: '提交于'
+    from: 来自
+    back: 返回
+    from_/_back: 来自／返回
+    date_range: 往返时间
+
+    post_new_activity: 发布行程
+
+    save: 保存
+    description: 详情
+    add_description: 关于旅行的更多细节……
+
+    list_activities: 行程列表
+    new_activity: 发布新行程
+    edit_activity: 更新行程

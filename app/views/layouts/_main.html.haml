@@ -1,0 +1,5 @@
+%main{class: [controller_name, action_name]}
+  .container<
+    = render 'layouts/flash'
+  .container<
+    = content_for?(:content) ? yield(:content) : yield

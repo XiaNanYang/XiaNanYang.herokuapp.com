@@ -1,0 +1,7 @@
+%h1= t('activity.edit_activity')
+
+= render 'form', activity: @activity
+
+= link_to 'Show', @activity
+\|
+= link_to t('action.back'), :back

@@ -1,0 +1,34 @@
+en:
+  place:
+    choose:
+      from: From city...
+      to: To city...
+    search: Search...
+
+    save: Save
+    name: Name
+    description: Description
+    add_name: Add Name of the Place
+    add_description: Add some description of the place...
+
+    list_places: Places
+    new_place: New Place
+    edit_place: Update Place
+
+zh-CN:
+  place:
+    where_to_go: 目的地...
+    choose:
+      from: 来源城市...
+      to: 返回城市...
+    search: 搜索...
+
+    save: 保存
+    name: 名称
+    description: 详情
+    add_name: 填写地点名称
+    add_description: 添加地点描述与介绍
+
+    list_places: 地点列表
+    new_place: 创建新地点
+    edit_place: 编辑地点

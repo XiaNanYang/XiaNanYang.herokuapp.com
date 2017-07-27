@@ -1,0 +1,43 @@
+= form_for activity do |f|
+  - if activity.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(activity.errors.count, "error")} prohibited this activity from being saved:"
+      %ul
+        - activity.errors.full_messages.each do |message|
+          %li= message
+
+  = f.hidden_field :user_id, value: current_user.id
+  .form-group.row
+    .input-group
+      %span.input-group-addon.btn.btn-secondary.mr-2<>= t('activity.description')
+      = f.text_area :description,
+                    class: 'form-control ckeditor',
+                    placeholder: t('activity.add_description'),
+                    'aria-describedby': 'activity-description-help',
+                    rows: 3
+    %small#activity-description-help.form-text.text-muted<>= t('activity.add_description')
+  .form-group.row.field
+    = f.fields_for :schedules do |builder|
+      = render 'schedule_fields', f: builder
+    = link_to_add_fields t("activity.schedule.add_schedule"), f, :schedules, class: [:btn, "btn-link", "btn-block"]
+  .form-group.row.actions
+    = f.submit t('activity.save'), class: [:btn, "btn-primary", "btn-lg", "btn-block"]
+
+.modal.fade.place-modal#modalNewPlace{"aria-labelledby": "newPlace", role: "dialog", tabindex: "-1"}
+  .modal-dialog.modal-sm{role: "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label": "Close", "data-dismiss": "modal", type: "button"}
+          %span{"aria-hidden": "true"} ×
+        %h4#newPlace.modal-title= t("place.add_place")
+      .modal-body
+        = form_for Place.new do |f|
+          = f.hidden_field :user_id, value: current_user.id
+          .form-group
+            = f.label :name
+            = f.text_field :name, class: "form-control"
+          .form-group
+            = f.label :description
+            = f.text_area :description, class: "form-control"
+          .form-group
+            = f.submit class: "btn btn-primary"

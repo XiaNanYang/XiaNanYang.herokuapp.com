@@ -1,0 +1,7 @@
+%h1= t('place.edit_place')
+
+= render 'form', place: @place
+
+= link_to 'Show', @place
+\|
+= link_to t('action.back'), :back

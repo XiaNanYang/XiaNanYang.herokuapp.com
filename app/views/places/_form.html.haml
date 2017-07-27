@@ -1,0 +1,29 @@
+= form_for place do |f|
+  - if place.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(place.errors.count, "error")} prohibited this place from being saved:"
+      %ul
+        - place.errors.full_messages.each do |message|
+          %li= message
+
+  = f.hidden_field :user_id, value: current_user.id
+  .form-group.row
+    .input-group
+      %span.input-group-addon.btn.btn-secondary.mr-2<>= t('place.name')
+      = f.text_field :name,
+                    class: 'form-control',
+                    placeholder: t('place.add_name'),
+                    'aria-describedby': 'place-name-help',
+                    rows: 3
+    %small#place-name-help.form-text.text-muted<>= t('place.add_name')
+  .form-group.row
+    .input-group
+      %span.input-group-addon.btn.btn-secondary.mr-2<>= t('place.description')
+      = f.text_area :description,
+                    class: 'form-control',
+                    placeholder: t('place.add_description'),
+                    'aria-describedby': 'place-description-help',
+                    rows: 3
+    %small#place-description-help.form-text.text-muted<>= t('place.add_description')
+  .form-group.row.actions
+    = f.submit t('place.save'), class: [:btn, "btn-primary", "btn-lg", "btn-block"]
