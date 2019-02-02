@@ -95,7 +95,7 @@ GEM
       xpath (~> 3.2)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    ckeditor_rails (4.6.2)
+    ckeditor_rails (4.10.0)
       railties (>= 3.0)
     code_analyzer (0.4.8)
       sexp_processor
