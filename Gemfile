@@ -63,7 +63,7 @@ gem 'kaminari'
 gem 'ckeditor_rails'
 gem 'rails-i18n'
 gem 'devise-i18n'
-gem 'globalize', github: 'globalize/globalize'
+gem 'globalize'
 gem 'activemodel-serializers-xml'
 gem 'title'
 source 'https://rails-assets.org' do
