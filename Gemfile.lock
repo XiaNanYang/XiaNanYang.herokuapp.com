@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/globalize/globalize.git
-  revision: 3fe2f93ab2d0f5d9c2b84e085f627cf469db72a1
-  specs:
-    globalize (5.2.0)
-      activemodel (>= 4.2, < 5.3)
-      activerecord (>= 4.2, < 5.3)
-      request_store (~> 1.0)
-
-GIT
   remote: https://github.com/huluren/acts_as_followable.git
   revision: 3cdc39edce290d751956d577eef61ce893f8e7c0
   specs:
@@ -111,7 +102,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
-    database_cleaner (1.6.1)
+    database_cleaner (1.7.0)
     debug_inspector (0.0.3)
     devise (4.5.0)
       bcrypt (~> 3.0)
@@ -138,6 +129,10 @@ GEM
     ffi (1.9.25)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    globalize (5.2.0)
+      activemodel (>= 4.2, < 5.3)
+      activerecord (>= 4.2, < 5.3)
+      request_store (~> 1.0)
     haml (5.0.1)
       temple (>= 0.8.0)
       tilt
@@ -389,7 +384,7 @@ DEPENDENCIES
   devise-i18n
   dotenv-rails
   factory_girl_rails
-  globalize!
+  globalize
   haml-rails
   jbuilder (~> 2.8)
   jquery-rails
