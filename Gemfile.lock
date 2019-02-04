@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/globalize/globalize.git
-  revision: 3fe2f93ab2d0f5d9c2b84e085f627cf469db72a1
-  specs:
-    globalize (5.2.0)
-      activemodel (>= 4.2, < 5.3)
-      activerecord (>= 4.2, < 5.3)
-      request_store (~> 1.0)
-
-GIT
   remote: https://github.com/huluren/acts_as_followable.git
   revision: 3cdc39edce290d751956d577eef61ce893f8e7c0
   specs:
@@ -138,6 +129,10 @@ GEM
     ffi (1.9.25)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    globalize (5.2.0)
+      activemodel (>= 4.2, < 5.3)
+      activerecord (>= 4.2, < 5.3)
+      request_store (~> 1.0)
     haml (5.0.1)
       temple (>= 0.8.0)
       tilt
@@ -209,7 +204,7 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     public_suffix (3.0.3)
-    puma (3.9.1)
+    puma (3.12.0)
     rack (2.0.6)
     rack-mini-profiler (0.10.5)
       rack (>= 1.2.0)
@@ -389,7 +384,7 @@ DEPENDENCIES
   devise-i18n
   dotenv-rails
   factory_girl_rails
-  globalize!
+  globalize
   haml-rails
   jbuilder (~> 2.8)
   jquery-rails
@@ -401,7 +396,7 @@ DEPENDENCIES
   pg (~> 1.1)
   pry-byebug
   pry-rails
-  puma (~> 3.7)
+  puma (~> 3.12)
   rack-mini-profiler
   rails (~> 5.1.6)
   rails-assets-tether!
