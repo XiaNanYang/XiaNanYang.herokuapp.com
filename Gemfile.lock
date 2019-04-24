@@ -95,9 +95,9 @@ GEM
     code_analyzer (0.4.8)
       sexp_processor
     coderay (1.1.2)
-    coffee-rails (4.2.2)
+    coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
+      railties (>= 5.2.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -212,7 +212,7 @@ GEM
       pry (>= 0.10.4)
     public_suffix (3.0.3)
     puma (3.12.0)
-    rack (2.0.6)
+    rack (2.0.7)
     rack-mini-profiler (1.0.2)
       rack (>= 1.2.0)
     rack-test (1.1.0)
@@ -386,7 +386,7 @@ DEPENDENCIES
   byebug
   capybara (~> 3.16)
   ckeditor_rails
-  coffee-rails (~> 4.2)
+  coffee-rails (~> 5.0)
   database_cleaner
   devise
   devise-i18n
